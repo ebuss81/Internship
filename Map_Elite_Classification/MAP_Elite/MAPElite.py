@@ -107,34 +107,34 @@ class MapElite:
 
     def saveInFile(self,num):
         if num == 0:
-            pickle_out = open("/home/ed/Dokumente/Codes/Map_Elite_Rework/results/fit0.pickle","wb")
+            pickle_out = open("Map_Elite_Classification/results/fit0.pickle","wb")
             pickle.dump(self.Grid,pickle_out,protocol= 0)
             pickle_out.close()
 
-            pickle_out1 = open("/home/ed/Dokumente/Codes/Map_Elite_Rework/results/archiv0.pickle","wb")
+            pickle_out1 = open("Map_Elite_Classification/results/archiv0.pickle","wb")
             pickle.dump(self.archive,pickle_out1,protocol= 0)
             pickle_out1.close()
         if num == 1:
-            pickle_out = open("/home/ed/Dokumente/Codes/Map_Elite_Rework/results/fit1.pickle","wb")
+            pickle_out = open("Map_Elite_Classification/results/fit1.pickle","wb")
             pickle.dump(self.Grid,pickle_out,protocol= 0)
             pickle_out.close()
 
-            pickle_out1 = open("/home/ed/Dokumente/Codes/Map_Elite_Rework/results/archiv1.pickle","wb")
+            pickle_out1 = open("Map_Elite_Classification/results/archiv1.pickle","wb")
             pickle.dump(self.archive,pickle_out1,protocol= 0)
             pickle_out1.close()
 
     def readFile(self,num):
         if num == 0:
-            pickle_in = open("/home/ed/Dokumente/Codes/Map_Elite_Rework/results/fit0.pickle","rb")
+            pickle_in = open("Map_Elite_Classification/results/fit0.pickle","rb")
             self.Grid = pickle.load(pickle_in)
             
-            pickle_in1 = open("/home/ed/Dokumente/Codes/Map_Elite_Rework/results/archiv0.pickle","rb")
+            pickle_in1 = open("Map_Elite_Classification/results/archiv0.pickle","rb")
             self.archive = pickle.load(pickle_in1)       
         if num == 1:
-            pickle_in = open("/home/ed/Dokumente/Codes/Map_Elite_Rework/results/fit1.pickle","rb")
+            pickle_in = open("Map_Elite_Classification/results/fit1.pickle","rb")
             self.Grid = pickle.load(pickle_in)
             
-            pickle_in1 = open("/home/ed/Dokumente/Codes/Map_Elite_Rework/results/archiv1.pickle","rb")
+            pickle_in1 = open("Map_Elite_Classification/results/archiv1.pickle","rb")
             self.archive = pickle.load(pickle_in1)   
 
     def getRandomIndi(self):
@@ -173,7 +173,7 @@ class MapElite:
 
 
     def saveFitness(self):
-        file_name = "Map_Elite_Rework/storage/Fitness" + str(datetime.now()) + ".txt"
+        file_name = "Map_Elite_Classification/storage/Fitness" + str(datetime.now()) + ".txt"
         file = open (file_name,"w+")
         for k in range(len(self.bf)):
             file.write("%d %f %f  \n"%(k,self.bf[k], self.af[k]))

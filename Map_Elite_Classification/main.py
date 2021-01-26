@@ -12,7 +12,7 @@ from parameters import *
 
 
 def main():
-    dataPaths = ["/home/ed/Dokumente/Codes/Classification_Network_Deap/data2.txt"]
+    dataPaths = ["Map_Elite_Classification/data2.txt"]
     titles = ["Neural Network Classification"]
     data, result  = loadData(dataPaths[0])
 
@@ -33,8 +33,8 @@ def main():
     #ME.run(20000,NN)
 
     #Analyze
-    ME.readFile(1)
-    NN.WG = ME.getIndi(33,0)
+    ME.readFile(0)
+    #NN.WG = ME.getIndi(0,0)
     #NN.printGraph()
     ME.analyze1()
     '''
